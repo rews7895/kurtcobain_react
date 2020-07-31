@@ -56,7 +56,7 @@ const BoardCreateContainer = ({history, location}) => {
 
     useEffect(() => {
         if(error) {
-            enqueueSnackbar("수정에 실패했습니다.", { variant: "error" });
+            enqueueSnackbar("생성에 실패했습니다.", { variant: "error" });
             // eslint-disable-next-line array-callback-return
             error.map((err) => {
                 dispatch(boardChangeErrorField({status: true, key: err.field, text: err.defaultMessage}));
